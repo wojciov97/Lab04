@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <SeekBar
+        android:id="@+id/seekBarBrigthness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/checkMinBright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minimum brightness"
+           />
+
+        <RadioButton
+            android:id="@+id/checkMaxBright"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="Maximum brightness" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manual set"
+            android:id="@+id/checkSet"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSendSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Send SMS"
+        app:layout_constraintStart_toStartOf="@+id/seekBarBrigthness"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarBrigthness" />
+
+    <EditText
+        android:id="@+id/edtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:hint="Number"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSendSMS"
+        app:layout_constraintStart_toEndOf="@+id/btnSendSMS"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/smsBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:hint="SMS body"
+        app:layout_constraintBottom_toBottomOf="@+id/edtNumber"
+        app:layout_constraintStart_toEndOf="@+id/edtNumber" />
+
+    <Button
+        android:id="@+id/btnSendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Send e-mail"
+        app:layout_constraintEnd_toEndOf="@+id/btnSendSMS"
+        app:layout_constraintStart_toStartOf="@+id/btnSendSMS"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendSMS" />
+
+    <Button
+        android:id="@+id/btnFind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Find student by ID"
+        app:layout_constraintStart_toStartOf="@+id/btnSendEmail"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendEmail" />
+
+    <EditText
+        android:id="@+id/EdtID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:hint="Type student id"
+        app:layout_constraintStart_toEndOf="@+id/btnFind"
+        app:layout_constraintTop_toTopOf="@+id/btnFind"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/TXTData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+
+        app:layout_constraintStart_toStartOf="@+id/btnFind"
+        app:layout_constraintTop_toBottomOf="@+id/EdtID" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
